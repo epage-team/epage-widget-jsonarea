@@ -7,6 +7,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 // const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const pkg = require('../package.json')
+
+const banner = `epage-iview v${pkg.version}
+(c) 2020-present Chengzi
+Released under the MIT License.`
 
 const webpackConfig = merge(webpackBaseConfig, {
   mode: 'production',
@@ -69,6 +74,7 @@ const webpackConfig = merge(webpackBaseConfig, {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: path.resolve(__dirname, '../dist')
     }),
+    new webpack.BannerPlugin(banner),
     // new HtmlWebpackPlugin({
     //   filename: 'index.html',
     //   template: './examples/index.html',
