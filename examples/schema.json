@@ -1,0 +1,56 @@
+{
+  "key": "sss",
+  "widget": "grid",
+  "hidden": false,
+  "option": {
+    "gutter": 0,
+    "align": "top",
+    "justify": "start"
+  },
+  "label": {
+    "width": 80,
+    "position": "right",
+    "colon": false
+  },
+  "container": true,
+  "children": [
+    {
+      "span": 24,
+      "list": [
+        {
+          "key": "kRpK7IF1T",
+          "widget": "jsonarea",
+          "hidden": false,
+          "option": {
+            "indent": 2
+          },
+          "name": "json",
+          "type": "json",
+          "label": "json",
+          "description": "",
+          "help": "",
+          "disabled": false,
+          "rules": [
+            {
+              "required": true,
+              "message": "必填",
+              "type": "string"
+            },
+            {
+              "message": "非法的json格式!",
+              "type": "json"
+            }
+          ],
+          "placeholder": "请输入json"
+        }
+      ]
+    }
+  ],
+  "title": "项目",
+  "description": "",
+  "size": "default",
+  "logics": [],
+  "style": {
+    "maxWidth": 1600
+  }
+}

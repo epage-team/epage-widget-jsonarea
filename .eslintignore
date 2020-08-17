@@ -1,0 +1,4 @@
+dist/*.js
+.vscode/
+node_modules/
+build/
